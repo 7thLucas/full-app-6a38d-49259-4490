@@ -59,72 +59,102 @@ export type TFont = {
   textFont: string;
 };
 
+export type TPopularDestination = {
+  name: string;
+  country: string;
+  imageUrl?: string;
+};
+
 export type TDefaultConfigurableData = {
   appName: string;
   logoUrl: string;
   brandColor: TBrandColor;
   font: TFont;
-  // Mirror new schema fields here. Example:
-  //   maxItemsPerPage?: number;
-  //   enableNotifications?: boolean;
-  //   featuredCategories?: string[];
+  appTagline?: string;
+  appDescription?: string;
+  heroCtaLabel?: string;
+  heroSecondaryCtaLabel?: string;
+  chatPlaceholder?: string;
+  maxSavedTrips?: number;
+  enableMapView?: boolean;
+  enableExport?: boolean;
+  defaultBudgetLevel?: "low" | "mid" | "high";
+  interestCategories?: string[];
+  popularDestinations?: TPopularDestination[];
+  footerText?: string;
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
-  appName: "My App",
+  appName: "WanderMind",
   logoUrl: "",
   brandColor: {
     // Base
     background:        "#ffffff",
-    foreground:        "#09090b",
+    foreground:        "#0f172a",
     // Card
-    card:              "#ffffff",
-    cardForeground:    "#09090b",
+    card:              "#f8fafc",
+    cardForeground:    "#0f172a",
     // Popover
     popover:           "#ffffff",
-    popoverForeground: "#09090b",
+    popoverForeground: "#0f172a",
     // Primary
-    primary:           "#2563eb",
+    primary:           "#0d9488",
     primaryForeground: "#ffffff",
     // Secondary
-    secondary:           "#f4f4f5",
-    secondaryForeground: "#18181b",
+    secondary:           "#e0f2fe",
+    secondaryForeground: "#0369a1",
     // Muted
-    muted:           "#f4f4f5",
-    mutedForeground: "#71717a",
+    muted:           "#f1f5f9",
+    mutedForeground: "#64748b",
     // Accent
-    accent:           "#f4f4f5",
-    accentForeground: "#18181b",
+    accent:           "#ccfbf1",
+    accentForeground: "#0d9488",
     // Destructive
     destructive:           "#ef4444",
-    destructiveForeground: "#fafafa",
+    destructiveForeground: "#ffffff",
     // Border / Input / Ring
-    border: "#e4e4e7",
-    input:  "#e4e4e7",
-    ring:   "#2563eb",
+    border: "#e2e8f0",
+    input:  "#e2e8f0",
+    ring:   "#0d9488",
     // Charts
-    chart1: "#f97316",
-    chart2: "#0d9488",
-    chart3: "#1e3a5f",
-    chart4: "#d4a017",
-    chart5: "#ea580c",
+    chart1: "#0d9488",
+    chart2: "#0369a1",
+    chart3: "#06b6d4",
+    chart4: "#f59e0b",
+    chart5: "#8b5cf6",
     // Navbar
-    navbarBackground: "#ffffff",
+    navbarBackground: "#0d9488",
     // Sidebar
-    sidebarBackground:        "#fafafa",
-    sidebarForeground:        "#3f3f46",
-    sidebarPrimary:           "#2563eb",
+    sidebarBackground:        "#f8fafc",
+    sidebarForeground:        "#0f172a",
+    sidebarPrimary:           "#0d9488",
     sidebarPrimaryForeground: "#ffffff",
-    sidebarAccent:            "#f4f4f5",
-    sidebarAccentForeground:  "#18181b",
-    sidebarBorder:            "#e4e4e7",
-    sidebarRing:              "#2563eb",
+    sidebarAccent:            "#ccfbf1",
+    sidebarAccentForeground:  "#0d9488",
+    sidebarBorder:            "#e2e8f0",
+    sidebarRing:              "#0d9488",
   },
   font: {
     headingFont: "Plus Jakarta Sans",
     textFont: "Inter",
   },
-  // ─────────────────────────────────────────────────────────────────────
-  // Add new field defaults here. See RULES.md §5 for per-type shape.
-  // ─────────────────────────────────────────────────────────────────────
+  appTagline: "Deskripsikan perjalananmu, kami yang rencanakan segalanya",
+  appDescription: "WanderMind adalah agen perjalanan AI pribadi yang membantu Anda merencanakan perjalanan impian dengan cepat dan mudah.",
+  heroCtaLabel: "Mulai Rencanakan",
+  heroSecondaryCtaLabel: "Lihat Contoh",
+  chatPlaceholder: "Ceritakan perjalanan impianmu... (misal: 3 hari di Bali, budget mid, suka kuliner dan alam)",
+  maxSavedTrips: 20,
+  enableMapView: true,
+  enableExport: true,
+  defaultBudgetLevel: "mid",
+  interestCategories: ["Kuliner", "Alam", "Budaya", "Petualangan", "Belanja", "Relaksasi", "Sejarah", "Nightlife"],
+  popularDestinations: [
+    { name: "Bali", country: "Indonesia", imageUrl: "" },
+    { name: "Tokyo", country: "Jepang", imageUrl: "" },
+    { name: "Paris", country: "Prancis", imageUrl: "" },
+    { name: "Bangkok", country: "Thailand", imageUrl: "" },
+    { name: "Yogyakarta", country: "Indonesia", imageUrl: "" },
+    { name: "Singapore", country: "Singapura", imageUrl: "" },
+  ],
+  footerText: "© 2026 WanderMind. Semua hak dilindungi.",
 };

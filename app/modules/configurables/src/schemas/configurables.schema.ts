@@ -99,6 +99,39 @@ export const configurableSchemas: ConfigurableSchemas = {
       ],
     },
 
+    // ── WanderMind App Copy ──────────────────────────────────────────────────
+    { fieldName: "appTagline", type: "string", required: false, label: "App Tagline", maxLength: 200 },
+    { fieldName: "appDescription", type: "string", required: false, label: "App Description", maxLength: 500 },
+    { fieldName: "heroCtaLabel", type: "string", required: false, label: "Hero CTA Button Label", maxLength: 80 },
+    { fieldName: "heroSecondaryCtaLabel", type: "string", required: false, label: "Hero Secondary CTA Label", maxLength: 80 },
+    { fieldName: "chatPlaceholder", type: "string", required: false, label: "Chat Input Placeholder", maxLength: 200 },
+    { fieldName: "maxSavedTrips", type: "number", required: false, label: "Max Saved Trips Per User", min: 1, max: 100 },
+    { fieldName: "enableMapView", type: "boolean", required: false, label: "Enable Map View" },
+    { fieldName: "enableExport", type: "boolean", required: false, label: "Enable Export Feature" },
+    { fieldName: "defaultBudgetLevel", type: "enum", required: false, label: "Default Budget Level", options: ["low", "mid", "high"] },
+    {
+      fieldName: "interestCategories",
+      type: "array",
+      required: false,
+      label: "Interest Categories",
+      item: { type: "string", required: true },
+    },
+    {
+      fieldName: "popularDestinations",
+      type: "array",
+      required: false,
+      label: "Popular Destinations",
+      item: {
+        type: "object",
+        fields: [
+          { fieldName: "name", type: "string", required: true, label: "City Name" },
+          { fieldName: "country", type: "string", required: true, label: "Country" },
+          { fieldName: "imageUrl", type: "url", required: false, label: "Image URL" },
+        ],
+      },
+    },
+    { fieldName: "footerText", type: "string", required: false, label: "Footer Text", maxLength: 200 },
+
     {
       fieldName: "font",
       type: "object",
