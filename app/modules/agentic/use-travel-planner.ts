@@ -74,7 +74,7 @@ export function useTravelPlanner() {
     return msg;
   }, []);
 
-  const generateItinerary = useCallback(async (input: TripInput) => {
+  const generateItinerary = useCallback(async (input: TripInput): Promise<boolean> => {
     setLoading(true);
     setError(null);
 
@@ -169,12 +169,14 @@ Kembalikan respons dalam format JSON yang valid sesuai schema.`;
       const generated = result.response as GeneratedItinerary;
       setItinerary(generated);
 
-      const replyMsg = `Itinerary untuk ${generated.destination} sudah siap! ✈️\n\n${generated.summary}\n\nKamu bisa melihat rencana hari per hari di panel kanan. Mau aku sesuaikan sesuatu?`;
+      const replyMsg = `Itinerary untuk ${generated.destination} sudah siap!\n\n${generated.summary}\n\nKamu bisa melihat rencana hari per hari di panel kanan. Mau aku sesuaikan sesuatu?`;
       addMessage("assistant", replyMsg);
+      return true;
     } catch (err: any) {
       const errMsg = err.message ?? "Terjadi kesalahan saat membuat itinerary";
       setError(errMsg);
       addMessage("assistant", `Maaf, ${errMsg}. Coba lagi ya!`);
+      return false;
     } finally {
       setLoading(false);
     }

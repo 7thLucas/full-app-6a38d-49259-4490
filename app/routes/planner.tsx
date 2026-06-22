@@ -13,6 +13,8 @@ import {
   CalendarDays,
   RefreshCw,
   Map as MapIcon,
+  AlertCircle,
+  X,
 } from "lucide-react";
 import type { TripInput } from "~/modules/agentic/use-travel-planner";
 
@@ -25,6 +27,7 @@ export default function PlannerPage() {
     messages,
     itinerary,
     loading,
+    error,
     generateItinerary,
     adjustItinerary,
     clearAll,
@@ -35,9 +38,14 @@ export default function PlannerPage() {
 
   const handleGenerateItinerary = async (input: TripInput) => {
     setTripInput(input);
-    await generateItinerary(input);
-    // After generation, switch to timeline view
-    setActiveTab("timeline");
+    const success = await generateItinerary(input);
+    if (success) {
+      // Switch to timeline to show the result
+      setActiveTab("timeline");
+    } else {
+      // Switch to chat so user sees the error message from the assistant
+      setActiveTab("chat");
+    }
   };
 
   const handleAdjust = async (message: string) => {
@@ -66,6 +74,21 @@ export default function PlannerPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Navbar />
+
+      {/* Error banner */}
+      {error && (
+        <div className="flex items-center gap-3 px-4 py-3 bg-destructive/10 border-b border-destructive/20">
+          <AlertCircle className="w-4 h-4 text-destructive flex-shrink-0" />
+          <p className="text-sm text-destructive flex-1">{error}</p>
+          <button
+            onClick={() => clearAll()}
+            className="p-1 rounded text-destructive/70 hover:text-destructive transition-colors"
+            aria-label="Tutup pesan error"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+      )}
 
       {/* Desktop: Split Layout | Mobile: Tabbed */}
       <main className="flex-1 flex flex-col">
