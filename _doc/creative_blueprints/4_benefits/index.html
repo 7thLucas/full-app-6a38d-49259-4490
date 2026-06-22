@@ -1,0 +1,80 @@
+<style>
+  .mode-landscape .sl-metrics { grid-template-columns: repeat(4, 1fr); }
+  .mode-portrait .sl-metrics { grid-template-columns: repeat(2, 1fr); }
+  .mode-landscape .sl-bottom { flex-direction: row; }
+  .mode-portrait .sl-bottom { flex-direction: column; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-10">
+
+    <!-- Header -->
+    <div class="mb-7">
+      <div class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">Nilai Nyata</div>
+      <h2 class="text-3xl font-black text-slate-900">Dari riset berjam-jam ke <span class="text-teal-600">itinerari dalam detik</span></h2>
+    </div>
+
+    <!-- Metric cards -->
+    <div class="sl-metrics grid gap-4 mb-6">
+
+      <div class="rounded-2xl bg-teal-500 p-5 text-white">
+        <div class="text-xs font-semibold text-teal-100 uppercase tracking-wide mb-3">Waktu Dihemat</div>
+        <div class="text-4xl font-black mb-1">5+ jam</div>
+        <div class="text-xs text-teal-100 leading-relaxed">Per trip — tidak perlu lagi buka 10+ tab browser untuk riset manual</div>
+      </div>
+
+      <div class="rounded-2xl bg-blue-500 p-5 text-white">
+        <div class="text-xs font-semibold text-blue-100 uppercase tracking-wide mb-3">Kecepatan</div>
+        <div class="text-4xl font-black mb-1">&lt;30 dtk</div>
+        <div class="text-xs text-blue-100 leading-relaxed">Itinerari lengkap siap — dari input destinasi hingga rencana harian final</div>
+      </div>
+
+      <div class="rounded-2xl bg-indigo-500 p-5 text-white">
+        <div class="text-xs font-semibold text-indigo-100 uppercase tracking-wide mb-3">Personalisasi</div>
+        <div class="text-4xl font-black mb-1">100%</div>
+        <div class="text-xs text-indigo-100 leading-relaxed">Setiap plan unik — disesuaikan budget, minat, durasi, dan gaya perjalanan</div>
+      </div>
+
+      <div class="rounded-2xl bg-cyan-500 p-5 text-white">
+        <div class="text-xs font-semibold text-cyan-100 uppercase tracking-wide mb-3">Adaptasi</div>
+        <div class="text-4xl font-black mb-1">Real-time</div>
+        <div class="text-xs text-cyan-100 leading-relaxed">AI langsung ubah itinerari berdasarkan feedback — tanpa ulang dari nol</div>
+      </div>
+
+    </div>
+
+    <!-- ROI Summary -->
+    <div class="sl-bottom flex gap-4 flex-1">
+
+      <div class="flex-1 rounded-2xl bg-slate-900 p-6 text-white flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-3">Nilai Bagi Traveler</div>
+          <div class="text-2xl font-black text-white mb-2">Lebih banyak explore,<br/>lebih sedikit stres</div>
+          <p class="text-sm text-slate-400 leading-relaxed">WanderMind mengeliminasi friction terbesar dalam travel planning. Pengguna mulai menikmati antisipasi perjalanan — bukan kelelahan riset — sejak hari pertama.</p>
+        </div>
+        <div class="flex gap-6 mt-4 pt-4 border-t border-slate-700">
+          <div>
+            <div class="text-lg font-bold text-teal-400">Solo Traveler</div>
+            <div class="text-xs text-slate-400">Plan mandiri, percaya diri</div>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-blue-400">Keluarga</div>
+            <div class="text-xs text-slate-400">Aktivitas untuk semua umur</div>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-cyan-400">Backpacker</div>
+            <div class="text-xs text-slate-400">Budget optimal, petualangan max</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-56 rounded-2xl bg-teal-50 border border-teal-200 p-6 flex flex-col justify-center items-center text-center flex-shrink-0">
+        <div class="text-4xl mb-3">🌍</div>
+        <div class="text-sm font-bold text-slate-900 mb-1">Satu app,<br/>semua tipe traveler</div>
+        <div class="text-xs text-slate-500 leading-relaxed">Dari backpacker budget ketat hingga keluarga yang butuh kenyamanan penuh</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
