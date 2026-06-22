@@ -1,0 +1,102 @@
+<style>
+  .mode-landscape .sl-grid { grid-template-columns: repeat(4, 1fr); }
+  .mode-portrait .sl-grid { grid-template-columns: repeat(2, 1fr); }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-10">
+
+    <!-- Header -->
+    <div class="flex items-start justify-between mb-6">
+      <div>
+        <div class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">Fitur Utama</div>
+        <h2 class="text-3xl font-black text-slate-900">Semua yang kamu butuhkan<br/><span class="text-teal-600">dalam satu agen AI</span></h2>
+      </div>
+
+      <!-- Persona chips -->
+      <div class="flex gap-2 flex-wrap justify-end">
+        <span class="px-3 py-1.5 rounded-full bg-teal-500 text-white text-xs font-semibold shadow-sm">Solo Traveler</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 text-xs font-medium">Keluarga</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 text-xs font-medium">Backpacker</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 text-xs font-medium">Business + Leisure</span>
+      </div>
+    </div>
+
+    <!-- Feature grid -->
+    <div class="sl-grid grid gap-4 flex-1">
+
+      <!-- 1. AI Chat -->
+      <div class="rounded-2xl border border-teal-100 bg-teal-50 p-5 flex flex-col gap-3">
+        <div class="w-10 h-10 rounded-xl bg-teal-500 flex items-center justify-center text-white text-lg">💬</div>
+        <div>
+          <div class="font-bold text-slate-900 text-sm mb-1">AI Chat Interface</div>
+          <div class="text-xs text-slate-500 leading-relaxed">Input destinasi, budget, durasi & minat lewat percakapan natural.</div>
+        </div>
+      </div>
+
+      <!-- 2. Itinerary Generator -->
+      <div class="rounded-2xl border border-blue-100 bg-blue-50 p-5 flex flex-col gap-3">
+        <div class="w-10 h-10 rounded-xl bg-blue-500 flex items-center justify-center text-white text-lg">📋</div>
+        <div>
+          <div class="font-bold text-slate-900 text-sm mb-1">Itinerari Lengkap</div>
+          <div class="text-xs text-slate-500 leading-relaxed">Rencana harian morning/afternoon/evening dengan logistik dan durasi.</div>
+        </div>
+      </div>
+
+      <!-- 3. Hotel Recommendations -->
+      <div class="rounded-2xl border border-indigo-100 bg-indigo-50 p-5 flex flex-col gap-3">
+        <div class="w-10 h-10 rounded-xl bg-indigo-500 flex items-center justify-center text-white text-lg">🏨</div>
+        <div>
+          <div class="font-bold text-slate-900 text-sm mb-1">Rekomendasi Hotel</div>
+          <div class="text-xs text-slate-500 leading-relaxed">Pilihan hotel dikurasi berdasarkan budget dan lokasi optimal.</div>
+        </div>
+      </div>
+
+      <!-- 4. Tourist Spots -->
+      <div class="rounded-2xl border border-cyan-100 bg-cyan-50 p-5 flex flex-col gap-3">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500 flex items-center justify-center text-white text-lg">📍</div>
+        <div>
+          <div class="font-bold text-slate-900 text-sm mb-1">Destinasi Wisata</div>
+          <div class="text-xs text-slate-500 leading-relaxed">Tempat wisata AI-ranked yang cocok dengan minat spesifik pengguna.</div>
+        </div>
+      </div>
+
+      <!-- 5. Timeline View -->
+      <div class="rounded-2xl border border-teal-200 bg-white p-5 flex flex-col gap-3 shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-teal-600 flex items-center justify-center text-white text-lg">🕐</div>
+        <div>
+          <div class="font-bold text-slate-900 text-sm mb-1">Timeline Visual</div>
+          <div class="text-xs text-slate-500 leading-relaxed">Seluruh perjalanan dalam layout kronologis yang mudah dibaca.</div>
+        </div>
+      </div>
+
+      <!-- 6. Interactive Map -->
+      <div class="rounded-2xl border border-blue-200 bg-white p-5 flex flex-col gap-3 shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white text-lg">🗺️</div>
+        <div>
+          <div class="font-bold text-slate-900 text-sm mb-1">Peta Interaktif</div>
+          <div class="text-xs text-slate-500 leading-relaxed">Semua lokasi ter-pin, rute divisualisasikan langsung di peta.</div>
+        </div>
+      </div>
+
+      <!-- 7. Daily Activities -->
+      <div class="rounded-2xl border border-indigo-200 bg-white p-5 flex flex-col gap-3 shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white text-lg">🎯</div>
+        <div>
+          <div class="font-bold text-slate-900 text-sm mb-1">Aktivitas Harian</div>
+          <div class="text-xs text-slate-500 leading-relaxed">Jadwal terblokir waktu lengkap dengan estimasi jarak & durasi.</div>
+        </div>
+      </div>
+
+      <!-- 8. Feedback Loop -->
+      <div class="rounded-2xl border border-cyan-200 bg-white p-5 flex flex-col gap-3 shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-cyan-600 flex items-center justify-center text-white text-lg">🔄</div>
+        <div>
+          <div class="font-bold text-slate-900 text-sm mb-1">Feedback Loop</div>
+          <div class="text-xs text-slate-500 leading-relaxed">Minta perubahan via chat — AI menyesuaikan itinerari seketika.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
