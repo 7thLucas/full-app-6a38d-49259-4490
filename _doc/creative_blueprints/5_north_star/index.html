@@ -1,0 +1,132 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-left { width: 52%; }
+  .mode-portrait .sl-left { width: 100%; }
+  .mode-landscape .sl-right { width: 48%; }
+  .mode-portrait .sl-right { width: 100%; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-10">
+
+    <!-- Header -->
+    <div class="flex items-start justify-between mb-6">
+      <div>
+        <div class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">North Star Metric</div>
+        <h2 class="text-3xl font-black text-slate-900">Satu angka yang menentukan<br/><span class="text-teal-600">keberhasilan WanderMind</span></h2>
+      </div>
+      <span class="px-3 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-800 text-xs font-semibold flex-shrink-0">
+        Proyeksi — berdasarkan inputmu
+      </span>
+    </div>
+
+    <div class="sl-layout flex gap-6 flex-1">
+
+      <!-- Left: WVO Definition + Formula -->
+      <div class="sl-left flex flex-col gap-4">
+
+        <!-- Operation definition -->
+        <div class="rounded-2xl bg-teal-500 p-5 text-white">
+          <div class="text-xs font-bold text-teal-100 uppercase tracking-wide mb-2">Verified Operation</div>
+          <div class="text-xl font-black mb-1">Itinerari Diselesaikan</div>
+          <div class="text-sm text-teal-100 leading-relaxed">Pengguna input destinasi + budget + minat, AI menghasilkan itinerari lengkap, dan pengguna melihat hasil akhir (timeline + peta). Satu siklus = satu operasi verified.</div>
+        </div>
+
+        <!-- Formula -->
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 flex-1">
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-4">Formula WVO Mingguan</div>
+
+          <div class="space-y-3">
+
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+                <span class="text-sm text-slate-600">Pengguna aktif per minggu</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-xs font-semibold">Asumsi — isi nilaimu</span>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+                <span class="text-sm text-slate-600">Itinerari per user per minggu</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-xs font-semibold">Asumsi — isi nilaimu</span>
+            </div>
+
+            <div class="border-t border-slate-200 pt-3">
+              <div class="text-xs text-slate-500 mb-2">Contoh jika diisi:</div>
+              <div class="font-mono text-sm text-slate-700 bg-white rounded-lg p-3 border border-slate-200">
+                200 users × 1,5 itinerari/minggu<br/>
+                = <span class="font-bold text-teal-600">300 itinerari / minggu</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Value & ROI -->
+      <div class="sl-right flex flex-col gap-4">
+
+        <!-- Value per operation -->
+        <div class="rounded-2xl border border-blue-200 bg-blue-50 p-5">
+          <div class="text-xs font-bold text-blue-700 uppercase tracking-wide mb-3">Nilai per Operasi</div>
+          <div class="space-y-2 text-sm text-slate-700">
+            <div class="flex items-start gap-2">
+              <span class="text-blue-400 mt-0.5">→</span>
+              <span>Waktu riset manual dihemat: <strong>5 jam/trip</strong></span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-blue-400 mt-0.5">→</span>
+              <span>Nilai waktu pengguna: <span class="px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 text-xs font-semibold">Asumsi</span></span>
+            </div>
+            <div class="border-t border-blue-200 pt-2 mt-2 font-mono text-xs text-slate-600">
+              1 itinerari = 5 jam waktu terhemat<br/>
+              × nilai waktu pengguna = nilai/op
+            </div>
+          </div>
+        </div>
+
+        <!-- Total value projection -->
+        <div class="rounded-2xl bg-slate-900 p-5 text-white flex-1">
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-4">Proyeksi Dampak Tahunan</div>
+
+          <div class="space-y-3 mb-4">
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-slate-400">WVO / minggu (contoh)</span>
+              <span class="text-lg font-bold text-teal-400">300</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-slate-400">Jam dihemat / minggu</span>
+              <span class="text-lg font-bold text-teal-400">1.500 jam</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-slate-400">Jam dihemat / tahun</span>
+              <span class="text-lg font-bold text-teal-400">78.000 jam</span>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-700 pt-4">
+            <div class="text-xs text-slate-400 mb-1">Formula (300 ops/minggu × 5 jam × 52 minggu)</div>
+            <div class="text-2xl font-black text-white">78.000 jam/tahun</div>
+            <div class="text-xs text-slate-400 mt-1">dihemat dari riset manual — dengan asumsi 200 pengguna aktif</div>
+          </div>
+        </div>
+
+        <!-- Watch this number -->
+        <div class="rounded-2xl border border-teal-200 bg-teal-50 p-4 flex items-center gap-3">
+          <div class="text-2xl">⭐</div>
+          <div>
+            <div class="text-xs font-bold text-teal-700 uppercase tracking-wide">Pantau ini setiap minggu</div>
+            <div class="text-sm text-slate-700 font-medium">Jumlah itinerari diselesaikan — bukan signups, bukan page views</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
