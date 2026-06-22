@@ -1,0 +1,74 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-left { width: 55%; }
+  .mode-portrait .sl-left { width: 100%; }
+  .mode-landscape .sl-right { width: 45%; }
+  .mode-portrait .sl-right { width: 100%; min-height: 220px; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Left: Problem + Solution -->
+    <div class="sl-left flex flex-col justify-center p-12 gap-8">
+
+      <!-- Section label -->
+      <div class="text-xs font-bold tracking-widest text-slate-400 uppercase">Mengapa WanderMind Ada</div>
+
+      <!-- Problem -->
+      <div class="rounded-2xl border border-red-100 bg-red-50 p-6">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-6 h-6 rounded-full bg-red-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">!</span>
+          <span class="text-sm font-bold text-red-700 uppercase tracking-wide">Masalah</span>
+        </div>
+        <h2 class="text-xl font-bold text-slate-900 mb-2">Riset manual itu melelahkan</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">Traveler buang waktu <strong>berjam-jam</strong> di berbagai tab — cari destinasi, bandingkan hotel, mapping rute, susun jadwal harian. Hasilnya seringkali itinerari generik yang tidak sesuai minat atau budget mereka.</p>
+        <div class="flex gap-4 mt-4">
+          <div class="text-center">
+            <div class="text-xl font-black text-red-600">5+ jam</div>
+            <div class="text-xs text-slate-500">riset rata-rata</div>
+          </div>
+          <div class="w-px bg-red-200"></div>
+          <div class="text-center">
+            <div class="text-xl font-black text-red-600">10+ tab</div>
+            <div class="text-xs text-slate-500">browser terbuka</div>
+          </div>
+          <div class="w-px bg-red-200"></div>
+          <div class="text-center">
+            <div class="text-xl font-black text-red-600">0%</div>
+            <div class="text-xs text-slate-500">personalisasi nyata</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="flex items-center gap-3">
+        <div class="flex-1 h-px bg-slate-200"></div>
+        <div class="w-8 h-8 rounded-full bg-teal-500 flex items-center justify-center text-white text-base">↓</div>
+        <div class="flex-1 h-px bg-slate-200"></div>
+      </div>
+
+      <!-- Solution -->
+      <div class="rounded-2xl border border-teal-200 bg-teal-50 p-6">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-6 h-6 rounded-full bg-teal-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">✓</span>
+          <span class="text-sm font-bold text-teal-700 uppercase tracking-wide">Solusi</span>
+        </div>
+        <h2 class="text-xl font-bold text-slate-900 mb-2">Agen AI yang benar-benar mengenal kamu</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">Ceritakan tujuan, budget, dan minatmu. WanderMind langsung hasilkan itinerari lengkap — hotel, tempat wisata, aktivitas harian — ditampilkan dalam <strong>timeline visual</strong> dan <strong>peta interaktif</strong>. Mau diubah? Bilang saja, AI menyesuaikan seketika.</p>
+      </div>
+
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="sl-right relative overflow-hidden rounded-l-3xl">
+      <img
+        src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=frustrated%20traveler%20surrounded%20by%20multiple%20browser%20tabs%20and%20maps%2C%20then%20transforming%20to%20happy%20traveler%20with%20clean%20AI%20app%20showing%20organized%20itinerary%2C%20split%20concept%2C%20teal%20accent%2C%20clean%20illustration%20style"
+        alt="Problem vs solution"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+  </div>
+</section>
